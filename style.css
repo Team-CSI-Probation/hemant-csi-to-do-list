@@ -27,14 +27,18 @@ html {
     background-color: #ffffff;
     border-radius: 2rem;
     box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
-    padding: 3rem;
+    padding: 1.6rem;
     /* text-aligns:center; */
 }
 
 .title{
 	width:auto;
     text-align: center;
+    font-size: 20px;
 	margin:auto;
+    padding: 1rem;
+    background-color: #5029bc;
+    border-radius: 4px;
 	margin-bottom: 2rem;
 }
 
@@ -60,7 +64,7 @@ html {
 
 .input-box input{
     height: 38px;
-    width: 75%;
+    width: 90%;
     border: none;
     outline: none;
     font-size: 18px;

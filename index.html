@@ -13,18 +13,28 @@
         <!-- HEADING -->
         <div class="mobile_container">
             <div class="title">
-                <h1>TO do list</h1>
+                <h1>TO Do List</h1>
             </div>
 
             <!-- INPUT OF TO DO LIST -->
             <div class="inputarea">
                 <div class="input-box">
-                    <input type="text" placeholder="To do...">
+                    <input id="task-to-do" type="text" placeholder="To do...">
                 </div>
                 <div class="button">
-                    <input type="button" value="Add" >
+                    <input id="add-task" onclick="addtask()" type="button" value="Add" >
                 </div>
             </div>
+
+            <!-- TASK-ADDED -->
+            <div class="task">
+                <ul id="mytask">
+
+
+                </ul>
+            </div>
+
+
             
         </div>
   
