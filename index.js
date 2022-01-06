@@ -1,4 +1,5 @@
-function addtask(){
+// ADD TASK IN LIST
+function addtasks(){
     var listitem = document.createElement("li");
     var textvalue = document.getElementById("task-to-do").value;
     var task = document.createTextNode(textvalue);
@@ -8,15 +9,15 @@ function addtask(){
     }
 
     else{
-        document.getElementById("mytask").appendChild(li);
+        document.getElementById("mytask").appendChild(listitem);
     }
     document.getElementById("task-to-do").value = "";
 
-    var span = document.createElement("SPAN");
-    var text = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(text);
-    li.appendChild(span);
+    var deletebutton = document.createElement("SPAN");
+    var X = document.createTextNode("\u00D7");
+    deletebutton.className = "close";
+    deletebutton.appendChild(X);
+    listitem.appendChild(deletebutton);
 
     for(var i = 0; i < close.length; i++){
         close[i].onclick = function(){
@@ -25,3 +26,24 @@ function addtask(){
         }
     }
 }
+
+
+// DELETE TASK
+var close = document.getElementsByClassName("close");
+
+for(var i = 0; i < close.length; i++){
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
+}
+
+
+// CHECKBOX QUERRY
+var list = document.querySelector('ul');
+
+list.addEventListener('click', function(ev){
+    if (ev.target.tagName == 'LI'){
+        ev.target.classList.add('checked');
+    }
+});
