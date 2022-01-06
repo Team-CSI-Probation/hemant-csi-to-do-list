@@ -13,6 +13,7 @@ html {
     font-family: "jost", sans-serif;
 }
 
+
 .main_div {
     width: 100vw;
     height: 100vh;
@@ -20,6 +21,7 @@ html {
     display: grid;
     place-items:center;
 }
+
 
 .mobile_container{
     width: 35rem;
@@ -30,6 +32,7 @@ html {
     padding: 1.6rem;
     /* text-aligns:center; */
 }
+
 
 .title{
 	width:auto;
@@ -42,10 +45,14 @@ html {
 	margin-bottom: 2rem;
 }
 
+/* Inputarea for task */
+
 .inputarea{
     display: flex;
     /* align-items: center; */
 }
+
+/* Button */
 
 .button input[type="button"]{
     color: #fff;
@@ -62,6 +69,8 @@ html {
     background: #5029bc;
 }
 
+/* Text input */
+
 .input-box input{
     height: 38px;
     width: 90%;
@@ -72,4 +81,70 @@ html {
     border-radius: 6px;
     padding: 0 15px;
     resize: none;
+}
+
+/* LIST of TASK */
+
+.task{
+    padding: 6px 0;
+}
+
+.task #mytask{
+    max-height: 25rem;
+    overflow-y: auto;
+}
+
+#mytask li{
+    position: relative;
+    list-style: none;
+    /* max-height: 6rem; */
+    line-height: 45px;
+    margin-bottom: 4px;
+    background: #d4d4d4;
+    border-radius: 6px;
+    color: #5029bc;
+    font-size: medium;
+    padding: 6px 16px 6px 2em;
+    cursor: default;
+    overflow: hidden;
+
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+
+  #mytask li:nth-child(odd){
+    background: #797979;
+}
+
+#mytask li:hover{
+    background: rgb(65, 65, 65);
+}
+
+ul li.checked{
+    background: blue;
+    text-decoration: line-through;
+}
+
+#mytask li.checked::before{
+    content: "\f14a";
+    font-family: FontAwesome;
+    position: absolute;
+    left: 20px;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
 }
