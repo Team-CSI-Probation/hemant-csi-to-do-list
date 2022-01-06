@@ -19,6 +19,10 @@ function addtasks(){
     deletebutton.appendChild(X);
     listitem.appendChild(deletebutton);
 
+    // DELETE TASK
+
+    var close = document.getElementsByClassName("close");
+
     for(var i = 0; i < close.length; i++){
         close[i].onclick = function(){
             var div = this.parentElement;
@@ -27,23 +31,11 @@ function addtasks(){
     }
 }
 
-
-// DELETE TASK
-var close = document.getElementsByClassName("close");
-
-for(var i = 0; i < close.length; i++){
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
-
-
 // CHECKBOX QUERRY
 var list = document.querySelector('ul');
 
-list.addEventListener('click', function(ev){
-    if (ev.target.tagName == 'LI'){
-        ev.target.classList.add('checked');
+list.addEventListener('click', function(ischecked){
+    if (ischecked.target.tagName == 'LI'){
+        ischecked.target.classList.add('checked');
     }
 });

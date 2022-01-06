@@ -124,7 +124,7 @@ html {
     background: rgb(65, 65, 65);
 }
 
-ul li.checked{
+#mytask li.checked{
     text-decoration: line-through;
 }
 
