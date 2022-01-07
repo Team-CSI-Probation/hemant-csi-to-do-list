@@ -19,17 +19,7 @@ function addtasks(){
     deletebutton.appendChild(X);
     listitem.appendChild(deletebutton);
 
-    // DELETE TASK
-    
-    
-    // var close = document.getElementsByClassName("close");
-    // console.log(close.length);
-    // for(var i = 0; i < close.length; i++){
-        //     close[i].addEventListener('click', function(){
-            //         var div = this.parentElement;
-            //         div.style.display = "none";
-            //     });
-            // }
+            // DELETE TASK
             var close = document.getElementsByClassName("close");
             console.log(close);
             for(var i=0;i<close.length;i++){
@@ -39,7 +29,6 @@ function addtasks(){
                         del.style.display="none";
                     }
                 });
-
             }
 }
         
