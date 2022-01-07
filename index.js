@@ -34,8 +34,8 @@ function addtasks(){
 // CHECKBOX QUERRY
 var list = document.querySelector('ul');
 
-list.addEventListener('click', function(ischecked){
-    if (ischecked.target.tagName == 'LI'){
-        ischecked.target.classList.add('checked');
+list.addEventListener('click', function(listitem){
+    if (listitem.target.tagName == 'LI'){
+        listitem.target.classList.add('checked');
     }
 });
