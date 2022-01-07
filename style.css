@@ -140,7 +140,7 @@ html {
 
 .close {
     position: absolute;
-    display: grid;
+    /* display: grid; */
     border-radius: 6px;
     right: 0;
     top: 0;

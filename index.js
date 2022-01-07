@@ -20,22 +20,36 @@ function addtasks(){
     listitem.appendChild(deletebutton);
 
     // DELETE TASK
+    
+    
+    // var close = document.getElementsByClassName("close");
+    // console.log(close.length);
+    // for(var i = 0; i < close.length; i++){
+        //     close[i].addEventListener('click', function(){
+            //         var div = this.parentElement;
+            //         div.style.display = "none";
+            //     });
+            // }
+            var close = document.querySelector('SPAN');
+            console.log(close);
+            for(var i=0; i<close.length;i++)
+            {
+                close[i].addEventListener('click', function(del){
+                    if(del.target.tagName==='SPAN'){
+                        var del = this.parentElement;
+                        del.style.display="none";
+                    }
+                });
 
-    var close = document.getElementsByClassName("close");
-
-    for(var i = 0; i < close.length; i++){
-        close[i].onclick = function(){
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
+        
+            }
 }
-
+        
 // CHECKBOX QUERRY
 var list = document.querySelector('ul');
-
+console.log(list);
 list.addEventListener('click', function(listitem){
-    if (listitem.target.tagName == 'LI'){
-        listitem.target.classList.add('checked');
+    if (listitem.target.tagName === 'LI'){
+        listitem.target.classList.toggle('checked');
     }
 });
