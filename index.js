@@ -30,10 +30,9 @@ function addtasks(){
             //         div.style.display = "none";
             //     });
             // }
-            var close = document.querySelector('SPAN');
+            var close = document.getElementsByClassName("close");
             console.log(close);
-            for(var i=0; i<close.length;i++)
-            {
+            for(var i=0;i<close.length;i++){
                 close[i].addEventListener('click', function(del){
                     if(del.target.tagName==='SPAN'){
                         var del = this.parentElement;
@@ -41,7 +40,6 @@ function addtasks(){
                     }
                 });
 
-        
             }
 }
         
@@ -49,7 +47,7 @@ function addtasks(){
 var list = document.querySelector('ul');
 console.log(list);
 list.addEventListener('click', function(listitem){
-    if (listitem.target.tagName === 'LI'){
+    if (listitem.target.tagName =='LI'){
         listitem.target.classList.toggle('checked');
     }
 });
